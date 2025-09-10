@@ -1,7 +1,7 @@
-local types = require("./types")
-local parser = require("./parser")
+local types = require("@self/types")
+local parser = require("@self/parser")
 local process = require("@lune/process")
-local colorful = require("../colorful")
+local colorful = require("./colorful")
 
 export type Metadata = {
 	description: string,

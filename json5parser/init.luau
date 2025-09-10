@@ -1,7 +1,7 @@
-local converter = require("converter")
-local lexer = require("lexer")
-local parser = require("parser")
-local prep = require("prep")
+local converter = require("@self/converter")
+local lexer = require("@self/lexer")
+local parser = require("@self/parser")
+local prep = require("@self/prep")
 
 local function main(source: string)
 	local preppedSource = prep(source)

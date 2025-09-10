@@ -1,4 +1,4 @@
-local spawnProcess = require("../spawnProcess")
+local spawnProcess = require("./spawnProcess")
 
 local darklua = {}
 

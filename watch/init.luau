@@ -1,6 +1,6 @@
 local fs = require("@lune/fs")
 local task = require("@lune/task")
-local getFilesUnderDirectory = require("../getFilesUnderDirectory")
+local getFilesUnderDirectory = require("./getFilesUnderDirectory")
 
 local function watchPaths(paths: { string }, callback: () -> ())
 	local lastModified = {}

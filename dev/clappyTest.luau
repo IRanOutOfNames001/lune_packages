@@ -1,4 +1,4 @@
-local clappy = require("../clappy.luau")
+local clappy = require("../clappy")
 
 local testCommand = clappy.command({
 	name = "test",
