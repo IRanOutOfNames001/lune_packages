@@ -1,3 +1,3 @@
-local getFilesUnderDirectory = require("../getFilesUnderDirectory")
+local get_files_under_directory = require("../get_files_under_directory")
 
-print(getFilesUnderDirectory("json5parser"))
+print(get_files_under_directory("json5parser"))

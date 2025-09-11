@@ -1,6 +1,6 @@
 local fs = require("@lune/fs")
 local task = require("@lune/task")
-local getFilesUnderDirectory = require("./getFilesUnderDirectory")
+local get_files_under_directory = require("./get_files_under_directory")
 
 local function watchPaths(paths: { string }, callback: () -> ())
 	local lastModified = {}
@@ -35,7 +35,7 @@ function watch.directory(directories: { string }, onChanged: () -> ()): thread
 	local paths = {}
 
 	for _, directoryPath in directories do
-		for _, filePath in getFilesUnderDirectory(directoryPath) do
+		for _, filePath in get_files_under_directory(directoryPath) do
 			table.insert(paths, `{directoryPath}/{filePath}`)
 		end
 	end

@@ -1,9 +1,9 @@
-local spawnProcess = require("./spawnProcess")
+local spawn_process = require("./spawn_process")
 
 local rojo = {}
 
 function rojo.serve(projectFile: string): thread
-	return spawnProcess("rojo", { "serve", projectFile })
+	return spawn_process("rojo", { "serve", projectFile })
 end
 
 function rojo.sourcemap(projectFile: string, outputFile: string, watch: boolean): thread
@@ -19,11 +19,11 @@ function rojo.sourcemap(projectFile: string, outputFile: string, watch: boolean)
 		table.insert(parameters, "--watch")
 	end
 
-	return spawnProcess("rojo", parameters)
+	return spawn_process("rojo", parameters)
 end
 
 function rojo.build(projectFile: string, output: string): thread
-	return spawnProcess("rojo", { "build", projectFile, "--output", output })
+	return spawn_process("rojo", { "build", projectFile, "--output", output })
 end
 
 return rojo
