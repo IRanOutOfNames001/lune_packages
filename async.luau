@@ -1,6 +1,6 @@
 local task = require("@lune/task")
 
-return function(thread: thread, callback : () -> ())
+return function(thread: thread, callback : () -> ()?)
 	while coroutine.status(thread) ~= "dead" do
 		task.wait()
 	end
